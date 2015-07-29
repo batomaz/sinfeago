@@ -7,7 +7,46 @@
 
 <title>SINFEAGO | Registro de acesso</title>
 
-<!-- USER VOICE -->
+
+
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet"
+	href="https://app.userapp.io/css/demo/tutorial.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://app.userapp.io/js/userapp.client.js"></script>
+<script src="libs/common.js"></script>
+<script src="libs/valida.js"></script>
+<script src="libs/signup.js"></script>
+<script src="libs/desativaBotaoDireitoMouseMouse.js"></script>
+</head>
+<body onload="valida()">
+	<div class="container" style="text-align: center;">
+		<form class="form" onsubmit="return signup()">
+			<img src="img/logo300cinza.png" />
+			<div>
+				<br>
+			</div>
+			<div class="form-fields">
+				<input id="name" type="text" class="form-control" placeholder="Nome"
+					autofocus> <input id="username" type="text"
+					class="form-control" placeholder="Usuário" required> <input
+					id="email" type="text" class="form-control" placeholder="Email"
+					required> <input id="password" type="password"
+					class="form-control" placeholder="Senha" required>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Criar
+				conta</button>
+			<img id="loader" src="img/ajax-loader.gif"
+				style="display: none; margin: 30px auto;">
+		</form>
+		<a href="login.html">Voltar</a>
+	</div>
+	<script src="libs/desativaBotaoDireMouseMouse.js"></script>
+	
+	<!-- USER VOICE -->
 <script language="JavaScript">
 //Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/JI3hxj1qGkmcsj1dMlFY8A.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
@@ -50,44 +89,6 @@ UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right
 
 //Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
-
 </script>
-
-<link rel="stylesheet"
-	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
-<link rel="stylesheet"
-	href="https://app.userapp.io/css/demo/tutorial.css">
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="https://app.userapp.io/js/userapp.client.js"></script>
-<script src="libs/common.js"></script>
-<script src="libs/valida.js"></script>
-<script src="libs/signup.js"></script>
-<script src="libs/desativaBotaoDireitoMouseMouse.js"></script>
-</head>
-<body onload="valida()">
-	<div class="container" style="text-align: center;">
-		<form class="form" onsubmit="return signup()">
-			<img src="img/logo300cinza.png" />
-			<div>
-				<br>
-			</div>
-			<div class="form-fields">
-				<input id="name" type="text" class="form-control" placeholder="Nome"
-					autofocus> <input id="username" type="text"
-					class="form-control" placeholder="Usuário" required> <input
-					id="email" type="text" class="form-control" placeholder="Email"
-					required> <input id="password" type="password"
-					class="form-control" placeholder="Senha" required>
-			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Criar
-				conta</button>
-			<img id="loader" src="img/ajax-loader.gif"
-				style="display: none; margin: 30px auto;">
-		</form>
-		<a href="login.html">Voltar</a>
-	</div>
-	<script src="libs/desativaBotaoDireMouseMouse.js"></script>
 </body>
 </html>
