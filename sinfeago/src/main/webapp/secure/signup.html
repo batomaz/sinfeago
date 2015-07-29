@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SINFEAGO | Registro de acesso</title>
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet"
+	href="https://app.userapp.io/css/demo/tutorial.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://app.userapp.io/js/userapp.client.js"></script>
+<script src="libs/common.js"></script>
+<script src="libs/valida.js"></script>
+<script src="libs/signup.js"></script>
+<script src="libs/desativaBotaoDireitoMouseMouse.js"></script>
+</head>
+<body onload="valida()">
+	<div class="container" style="text-align: center;">
+		<form class="form" onsubmit="return signup()">
+			<img src="img/logo300cinza.png" />
+			<div>
+				<br>
+			</div>
+			<div class="form-fields">
+				<input id="name" type="text" class="form-control" placeholder="Nome"
+					autofocus> <input id="username" type="text"
+					class="form-control" placeholder="Usuário" required> <input
+					id="email" type="text" class="form-control" placeholder="Email"
+					required> <input id="password" type="password"
+					class="form-control" placeholder="Senha" required>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Criar
+				conta</button>
+			<img id="loader" src="img/ajax-loader.gif"
+				style="display: none; margin: 30px auto;">
+		</form>
+		<a href="login.html">Voltar</a>
+	</div>
+	<script src="libs/desativaBotaoDireMouseMouse.js"></script>
+</body>
+</html>

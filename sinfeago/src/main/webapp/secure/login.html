@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SINFEAGO | Acesso restrito</title>
+
+<!-- USER VOICE -->
+<script src="../js/UserVoice.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+<!-- CUSTOM FONTS -->
+<!-- Custom Fonts -->
+<link
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+	rel='stylesheet' type='text/css'>
+
+<!-- Custom styles -->
+<link rel="stylesheet"
+	href="https://app.userapp.io/css/demo/tutorial.css">
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://app.userapp.io/js/userapp.client.js"></script>
+<script src="libs/cookies.min.js"></script>
+<script src="libs/common.js"></script>
+<script src="libs/login.js"></script>
+<script src="libs/desativaBotaoDireitoMouse.js"></script>
+
+<script language="JavaScript">
+	function registrar() {
+		location.href = "signup.html";
+	}
+</script>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../">Início</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="../pcrja/">#PCRjá</a></li>
+					<li><a href="../pcrja/shop/"><span
+							class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Camisetas</a></li>
+					<li><a href="../noticias/">Notícias</a></li>
+					<li><a href="../juridico/">Assessoria jurídica</a></li>
+					<li><a href="../financeiro/">Financeiro</a></li>
+					<li><a href="../forum/">Fórum</a></li>
+					<li><a href="../sobre/">Quem somos</a></li>
+					<li><a href="../secure/"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Acesso restrito</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<br>
+	<div class="container" style="text-align: center;">
+		<form class="form" onsubmit="return login()">
+			<img src="img/logo300cinza.png" />
+			<div>
+				<br>
+			</div>
+			<div class="form-fields">
+				<input id="username" type="text" class="form-control"
+					placeholder="Usuário" required autofocus> <input
+					id="password" type="password" class="form-control"
+					placeholder="Senha" required>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+			<img id="loader" src="img/ajax-loader.gif"
+				style="display: none; margin: 30px auto;">
+		</form>
+
+		<!-- BOTÃO DE REGISTRO -->
+		<center>
+			<button style="width: 300px" class="btn btn-lg btn-info btn-block"
+				type="button" onclick="registrar()">Registre-se</button>
+		</center>
+		<br>
+		<!-- INICIO DO BOTÃO DE FILIAÇÃO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
+			method="post" onsubmit="PagSeguroLightbox(this); return false;">
+			<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+			<input type="hidden" name="code"
+				value="DD6437AFAFAFE717743A8F8C340BC04A" />
+			<center>
+				<button style="width: 300px"
+					class="btn btn-lg btn-success btn-block" type="hidden"
+					type="submit">Filie-se</button>
+			</center>
+		</form>
+		<script type="text/javascript"
+			src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+		<br>
+		<center>
+			<div style="width: 300px" align="justify">
+				<p>
+					Se você não é sindicalizado, clique no botão acima e
+					filie-se para ter acesso completo ao site. Caso seja filiado, mas
+					seu acesso foi negado, certifique-se de ter digitado corretamente o
+					CPF. Persistindo a restrição, utilize o <strong>Fale
+						Conosco</strong> situado no canto inferior direito desta página e relate a
+					situação informando o nome completo e número do documento.
+				</p>
+			</div>
+		</center>
+	</div>
+	<hr>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<ul class="list-inline text-center">
+						<li><a href="http://www.twitter.com/sinfeago" target="new">
+								<span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+						<li><a href="http://www.facebook.com/SINFEAGO" target="new">
+								<span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+						<li><a href="http://www.instagram.com/sinfeago" target="new">
+								<span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+					</ul>
+					<center>
+					<p class="copyright text-muted">Rua 261, nº 156 - St. Leste
+						Universitario, Goiânia - GO, 74610-250</p>
+					<p class="copyright text-muted">Copyright &copy; SINFEAGO 2015</p>
+					</center>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="../js/clean-blog.min.js"></script>
+</body>
+</html>
