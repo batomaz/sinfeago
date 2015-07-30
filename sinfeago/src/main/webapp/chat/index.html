@@ -26,6 +26,19 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	
+<!-- DESABILITA NOME APÓS ESCREVÊ-LO -->
+<script>
+function desabilita(){
+	document.getElementById('nameInput').disabled = true;
+}
+</script>
+<!-- SAI DO CHAT -->
+<script language="JavaScript">
+	function sair() {
+		location.href = "../index.html";
+	}
+</script>
 
 </head>
 
@@ -62,6 +75,7 @@
 						<li><a href="../juridico/">Assessoria jurídica</a></li>
 						<li><a href="../financeiro/">Financeiro</a></li>
 						<li><a href="../forum/">Fórum</a></li>
+						<li><a href="../chat/">Bate-papo</a></li>
 						<li><a href="../sobre/">Quem somos</a></li>
 						<li><a href="../secure/"><span
 								class="glyphicon glyphicon-lock" aria-hidden="true"></span>
@@ -80,8 +94,8 @@
 		<div class="example-chat l-demo-container">
 			<header>Bate-papo</header>
 			<div class='example-chat-toolbar'>
-				<label for="nameInput">Usuário:</label> <input type='text'
-					id='nameInput' placeholder='digite um nome de usuário...'>
+				<label for="nameInput">Usuário:</label>
+				<input type='text' id='nameInput' placeholder='digite um nome de usuário...' onblur="desabilita()">
 			</div>
 
 			<ul id='example-messages' class="example-chat-messages"></ul>
@@ -91,7 +105,10 @@
 					placeholder='Escreva uma mensagem...'>
 			</footer>
 		</div>
-
+		<div class=" l-demo-container" align="right">
+		<button style="width: 150px" class="btn btn-lg btn-danger btn-block" 
+				type="button" onclick="sair()">Sair</button>
+</div>
 		<!-- CHAT JAVACRIPT -->
 		<script>
 			// CREATE A REFERENCE TO FIREBASE
