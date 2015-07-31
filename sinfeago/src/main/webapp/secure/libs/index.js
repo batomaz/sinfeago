@@ -24,7 +24,7 @@
 		function onUserLoaded() {
 			// Print the name
 			document.getElementById("name").innerHTML = currentUser.first_name;
-
+			
       		// Load articles from back-end
       		getArticles();
 		}

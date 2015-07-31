@@ -28,28 +28,20 @@
 <script src="libs/common.js"></script>
 <script src="libs/index.js"></script>
 <script src="libs/desativaBotaoDireitoMouse.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	
-<!-- DESABILITA NOME APÓS ESCREVÊ-LO -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
 <script>
-function desabilita(){
-	document.getElementById('nameInput').disabled = true;
-}
-</script>
-<!-- SAI DO CHAT E DA ÁREA SEGURA -->
-<script>
-function sair() {
-	Cookies.expire("ua_session_token");
-	UserApp.User.logout(function() {
-		window.location.href = "login.html";
-	});
+// INSERE NOME DE USUÁRIO DIRETAMENTE NO CHAT
+
+function onUserLoaded() {
+	document.getElementById("nameInput").value = currentUser.first_name;
+		getArticles();
 }
 </script>
 
 </head>
 
-<body>
+<body onload="desabilita()">
 	<div id="fundo-externo">
 		<div id="fundo">
 			<img src="img/chat.jpg" alt="" />
@@ -67,8 +59,7 @@ function sair() {
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><span id="name"></span>, você
-					está no Bate-papo. </a>
+					<a class="navbar-brand" href="#">Bem-vindo à sala de bate-papo. </a>
 			</div>
 
 
@@ -96,8 +87,9 @@ function sair() {
 			<header>Bate-papo</header>
 			<div class='example-chat-toolbar'>
 				<label for="nameInput">Usuário:</label>
-				<input type='text' id='nameInput' placeholder='digite seu primeiro nome...' 
-				onblur="desabilita()" >
+				
+				<input type='text' id='nameInput' placeholder='digite seu primeiro nome...' >
+				
 			</div>
 
 			<ul id='example-messages' class="example-chat-messages"></ul>

@@ -33,3 +33,22 @@ $(window).resize(function() {
 $(window).load(function() {
 	$(window).resize();
 });
+
+
+// EDIÇÃO DE CAMPOS
+
+// DESABILITA EDIÇÃO DO CAMPO NOME
+
+function desabilita(){
+	document.getElementById("nameInput").disabled = true;
+}
+
+// SAI DO CHAT E DA ÁREA SEGURA
+
+function sair() {
+	Cookies.expire("ua_session_token");
+	UserApp.User.logout(function() {
+		window.location.href = "login.html";
+	});
+}
+
