@@ -21,8 +21,49 @@
 <script src="libs/valida.js"></script>
 <script src="libs/signup.js"></script>
 <script src="libs/desativaBotaoDireitoMouseMouse.js"></script>
+
+<script language="JavaScript">
+	function voltar() {
+		javascript:history.back();
+		}
+</script>
 </head>
 <body onload="valida()">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../">Início</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="../pcrja/">#PCRjá</a></li>
+					<li><a href="../pcrja/shop/"><span
+							class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Camisetas</a></li>
+					<li><a href="../noticias/">Notícias</a></li>
+					<li><a href="../juridico/">Assessoria jurídica</a></li>
+					<li><a href="../financeiro/">Financeiro</a></li>
+					<li><a href="../forum/">Fórum</a></li>
+					<li><a href="../sobre/">Quem somos</a></li>
+					<li><a href="../secure/"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Acesso restrito</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<br>
 	<div class="container" style="text-align: center;">
 		<form class="form" onsubmit="return signup()">
 			<img src="img/logo300cinza.png" />
@@ -42,7 +83,10 @@
 			<img id="loader" src="img/ajax-loader.gif"
 				style="display: none; margin: 30px auto;">
 		</form>
-		<a href="login.html">Voltar</a>
+				<center>
+			<button style="width: 300px" class="btn btn-lg btn-danger btn-block"
+				type="button" onclick="voltar()">Voltar</button>
+		</center>
 	</div>
 	<script src="libs/desativaBotaoDireMouseMouse.js"></script>
 	
