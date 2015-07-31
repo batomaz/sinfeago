@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet"
+	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/bootstrap/bootstrap.css" />
+<link type="text/css" rel="stylesheet"
+	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/font-awesome/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/common.css" />
+<link type="text/css" rel="stylesheet"
+	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/general.css" />
+<link type="text/css" rel="stylesheet"
+	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/add-edit-form.css" />
+<script
+	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/js/jquery-1.11.1.min.js"></script>
+<script
+	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/build/js/global-libs.min.js"></script>
+<script
+	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/js/form/add.js"></script>
+<script
+	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/js/jquery_plugins/jquery.noty.js"></script>
+<script
+	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/js/jquery_plugins/config/jquery.noty.config.js"></script>
+<script src="js/valida.js"></script>
+<style type='text/css'>
+body {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+</style>
+
+
+</head>
+<body>
+	</div>
+	</div>
+	<div style='height: 20px;'></div>
+	<div>
+		<div class="crud-form"
+			data-unique-hash="45dbc5cbbd3e97b799db3334f0a0488b">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-label">
+							<div class="floatL l5">Adicionar Cadastro</div>
+							<div
+								class="floatR r5 minimize-maximize-container minimize-maximize">
+								<i class="fa fa-caret-up"></i>
+							</div>
+							<div class="floatR r5 gc-full-width">
+								<i class="fa fa-expand"></i>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="form-container table-container">
+							<form
+								action="http://www.sinfeago.org.br/cadastro/index.php/cadastro/painel/insert"
+								method="post" id="crudForm" enctype="multipart/form-data"
+								class="form-horizontal" accept-charset="utf-8">
+
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> CPF </label>
+									<div class="col-sm-9">
+										<input placeholder="Apenas números" id='field-CPF'
+											class='form-control' name='CPF' type='text' value=""
+											onblur="javascript: validarCPF(this.value);"
+											onkeypress="javascript: mascara(this, cpf_mask);"
+											maxlength="14" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Nome </label>
+									<div class="col-sm-9">
+										<input placeholder="Primeiro nome" id='field-nome'
+											class='form-control' name='nome' type='text' value=""
+											maxlength='50' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Sobrenome </label>
+									<div class="col-sm-9">
+										<input placeholder="Complemento" id='field-sobrenome'
+											class='form-control' name='sobrenome' type='text' value=""
+											maxlength='50' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Endereço </label>
+									<div class="col-sm-9">
+										<input placeholder="Rua, nº, quadra, lote, bairro"
+											id='field-endereco' class='form-control' name='endereco'
+											type='text' value="" maxlength='300' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Município </label>
+									<div class="col-sm-9">
+										<input placeholder="Município de residência"
+											id='field-municipio' class='form-control' name='municipio'
+											type='text' value="" maxlength='50' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> CEP </label>
+									<div class="col-sm-9">
+										<input placeholder="Apenas números" id='field-CEP'
+											class='form-control' name='CEP' type='text' value=""
+											onkeypress="javascript: mascara(this, cep_mask);"
+											maxlength="10" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Telefone fixo </label>
+									<div class="col-sm-9">
+										<input placeholder="DDD + número" id='field-telefone'
+											class='form-control' name='telefone' type='text' value=""
+											onkeypress="javascript: mascara(this, tel_mask);"
+											maxlength="14" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Celular </i>
+									</label>
+									<div class="col-sm-9">
+										<input placeholder="DDD + número" id='field-celular'
+											class='form-control' name='celular' type='text' value=""
+											onkeypress="javascript: mascara(this, tel_mask);"
+											maxlength="14" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Email </label>
+									<div class="col-sm-9">
+										<input placeholder="nome@email.com" id='field-email'
+											class='form-control' name='email' type='text' value=""
+											onblur="email()" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Formação
+										acadêmica </label>
+									<div class="col-sm-9">
+										<input
+											placeholder="Médico Veterinário, Engenheiro Agrônomo..."
+											id='field-formacao' class='form-control' name='formacao'
+											type='text' value="" maxlength='50' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label placeholder="" class="col-sm-3 control-label">
+										Município de lotação </label>
+									<div class="col-sm-9">
+										<input
+											placeholder="Aparecida de Goiânia, Santa Rita do Araguaia..."
+											id='field-lotacao' class='form-control' name='lotacao'
+											type='text' value="" maxlength='50' />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"> Local de
+										trabalho </label>
+									<div class="col-sm-9">
+										<input placeholder="UOL Faina, Sede..." id='field-local'
+											class='form-control' name='local' type='text' value=""
+											maxlength='50' />
+									</div>
+								</div>
+								<!-- Start of hidden inputs -->
+								<!-- End of hidden inputs -->
+
+								<div class='small-loading hidden' id='FormLoading'>Carregando,
+									salvando dados...</div>
+
+								<div class="form-group">
+									<div id='report-error' class='report-div error bg-danger'
+										style="display: none"></div>
+									<!-- 
+									<div id='report-success' class='report-div success bg-success'
+										style="display: none"></div>
+									-->
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-3 col-sm-7">
+										<button class="btn btn-info b10" type="button"
+											id="save-and-go-back-button">
+											<i class="fa fa-rotate-left"></i> Salvar
+										</button>
+										<button class="btn btn-default cancel-button b10"
+											type="button" id="cancel-button">
+											<i class="fa fa-warning"></i> Cancelar
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var validation_url = 'http://www.sinfeago.org.br/cadastro/index.php/cadastro/painel/insert_validation';
+			var list_url = 'http://www.sinfeago.org.br/cadastro/index.php/cadastro/painel';
+
+			var message_alert_add_form = "Os dados que você inseriu NÃO foram salvos.\nTem certeza que deseja retornar para a listagem ?";
+			var message_insert_error = "Ocorreu um erro ao tentar gravar o registro";
+		</script>
+		<script type="text/javascript">
+			var js_date_format = 'dd/mm/yy';
+		</script>
+		<script type="text/javascript">
+			var default_javascript_path = 'http://www.sinfeago.org.br/cadastro/assets/grocery_crud/js';
+			var default_css_path = 'http://www.sinfeago.org.br/cadastro/assets/grocery_crud/css';
+			var default_texteditor_path = 'http://www.sinfeago.org.br/cadastro/assets/grocery_crud/texteditor';
+			var default_theme_path = 'http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes';
+			var base_url = 'http://www.sinfeago.org.br/cadastro/';
+		</script>
+	</div>
+</body>
+</html>
+
