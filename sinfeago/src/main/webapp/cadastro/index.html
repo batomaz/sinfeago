@@ -120,7 +120,7 @@ a:hover {
 							<form
 								action="http://www.sinfeago.org.br/cadastro/index.php/cadastro/painel/insert"
 								method="post" id="crudForm" enctype="multipart/form-data"
-								class="form-horizontal" accept-charset="utf-8">
+								class="form-horizontal" accept-charset="utf-8" name="crudForm" onsubmit="obriga();">
 
 								<div class="form-group">
 									<label class="col-sm-3 control-label"> CPF </label>
@@ -196,7 +196,7 @@ a:hover {
 									<label class="col-sm-3 control-label"> Email </label>
 									<div class="col-sm-9">
 										<input placeholder="nome@email.com" id="field-email"
-											class='form-control' name='field-email' type='text' value=""
+											class='form-control' name="field-email" type='text'
 											onblur="email();" />
 									</div>
 								</div>
@@ -247,7 +247,7 @@ a:hover {
 									<div class="col-sm-offset-3 col-sm-7">
 										<button class="btn btn-success b10" type="button"
 											id="save-and-go-back-button">
-											<i class="fa check"></i> Salvar
+											<i class="fa check" onsubmit="obriga(this)"></i> Salvar
 										</button>
 										<button class="btn btn-default cancel-button b10"
 											type="button" id="cancel-button">

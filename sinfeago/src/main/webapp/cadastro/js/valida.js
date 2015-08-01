@@ -147,3 +147,13 @@ function formatar(mascara, documento){
         documentos += texto.substring(0,1);
     }
 }
+
+// CAMPOS OBRIGATÓRIOS
+
+function obriga(){
+  if (document.crudForm.field-email.value == ''){
+	    alert('Preencha o campo e-mail.');
+	    document.crudForm.field-email.focus();
+	    return false;
+  }
+  }
