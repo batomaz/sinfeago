@@ -2,35 +2,35 @@
 
 // TELEFONE
 function tel_mask(v){
-	v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-	v=v.replace(/(\d{0})(\d)/,"$1($2")    //Coloca ( antes do primeiro dígitos
-	v=v.replace(/(\d{2})(\d)/,"$1) $2")    //Coloca ) entre o segundo e o terceiro dígitos
-	v=v.replace(/(\d{4})(\d)/,"$1-$2")    //Coloca - entre o sexto e o sétimo dígitos
+	v=v.replace(/\D/g,"")                 //Remove tudo o que nï¿½o ï¿½ dï¿½gito
+	v=v.replace(/(\d{0})(\d)/,"$1($2")    //Coloca ( antes do primeiro dï¿½gitos
+	v=v.replace(/(\d{2})(\d)/,"$1) $2")    //Coloca ) entre o segundo e o terceiro dï¿½gitos
+	v=v.replace(/(\d{4})(\d)/,"$1-$2")    //Coloca - entre o sexto e o sï¿½timo dï¿½gitos
 	return v
 }
 
 // CEP
 function cep_mask(v){
-	v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-	v=v.replace(/(\d{2})(\d)/,"$1.$2")    //Coloca ponto entre o segundo e o terceiro dígitos
-	v=v.replace(/(\d{3})(\d)/,"$1-$2")    //Coloca traço entre o quinto e o sexto dígitos
+	v=v.replace(/\D/g,"")                 //Remove tudo o que nï¿½o ï¿½ dï¿½gito
+	v=v.replace(/(\d{2})(\d)/,"$1.$2")    //Coloca ponto entre o segundo e o terceiro dï¿½gitos
+	v=v.replace(/(\d{3})(\d)/,"$1-$2")    //Coloca traï¿½o entre o quinto e o sexto dï¿½gitos
 	return v
 }
 
 // DATA
 function data_mask(v){
-	v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-	v=v.replace(/(\d{2})(\d)/,"$1/$2")    //Coloca / entre o segundo e o terceiro dígitos
-	v=v.replace(/(\d{2})(\d)/,"$1/$2")    //Coloca / entre o quarto e o quinto dígitos
+	v=v.replace(/\D/g,"")                 //Remove tudo o que nï¿½o ï¿½ dï¿½gito
+	v=v.replace(/(\d{2})(\d)/,"$1/$2")    //Coloca / entre o segundo e o terceiro dï¿½gitos
+	v=v.replace(/(\d{2})(\d)/,"$1/$2")    //Coloca / entre o quarto e o quinto dï¿½gitos
 	return v
 }
 
 // EMAIL
 function email(){
 var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-if(!filter.test(document.getElementById("txtEmail").value)){
+if(!filter.test(document.getElementById("field-email").value)){
 alert('Por favor, digite o email corretamente');
-document.getElementById("txtEmail").value="";
+document.getElementById("field-email").value="";
 return false
 }
 }
@@ -56,7 +56,7 @@ function validarCPF( cpf ){
 		cpf == "88888888888" || cpf == "99999999999")
 	{
 		alert("CPF inv\u00e1lido. Tente novamente.");
-		document.getElementById("txtCPF").value="";
+		document.getElementById("field-CPF").value="";
 		return false;
    }
 
@@ -72,7 +72,7 @@ function validarCPF( cpf ){
 		resto = 0;
 	}
 	if(resto != parseInt(cpf.charAt(9))){
-		alert("CPF inválido. Tente novamente.");
+		alert("CPF invï¿½lido. Tente novamente.");
 		document.getElementById("txtCPF").value="";
 		return false;
 	}
@@ -89,8 +89,8 @@ function validarCPF( cpf ){
 	}
 	
 	if(resto != parseInt(cpf.charAt(10))){
-		alert("CPF inválido. Tente novamente.");
-		document.getElementById("txtCPF").value="";
+		alert("CPF invï¿½lido. Tente novamente.");
+		document.getElementById("field-CPF").value="";
 		return false;
 	}
 	
@@ -119,15 +119,15 @@ function execmascara(){
 }
 
 function cpf_mask(v){
-	v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-	v=v.replace(/(\d{3})(\d)/,"$1.$2")    //Coloca ponto entre o terceiro e o quarto dígitos
-	v=v.replace(/(\d{3})(\d)/,"$1.$2")    //Coloca ponto entre o setimo e o oitava dígitos
-	v=v.replace(/(\d{3})(\d)/,"$1-$2")   //Coloca ponto entre o decimoprimeiro e o decimosegundo dígitos
+	v=v.replace(/\D/g,"")                 //Remove tudo o que nï¿½o ï¿½ dï¿½gito
+	v=v.replace(/(\d{3})(\d)/,"$1.$2")    //Coloca ponto entre o terceiro e o quarto dï¿½gitos
+	v=v.replace(/(\d{3})(\d)/,"$1.$2")    //Coloca ponto entre o setimo e o oitava dï¿½gitos
+	v=v.replace(/(\d{3})(\d)/,"$1-$2")   //Coloca ponto entre o decimoprimeiro e o decimosegundo dï¿½gitos
 	return v
 }
 
 
-// APENAS NÚMEROS (NÃO UTILIZADO NO CÓDIGO)
+// APENAS Nï¿½MEROS (Nï¿½O UTILIZADO NO Cï¿½DIGO)
 function apenasNumeros(x){
 var tecla=(window.event)?event.keyCode:x.which;
 if((tecla>45 && tecla<58)) return true;
