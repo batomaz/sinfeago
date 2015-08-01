@@ -14,6 +14,8 @@
 	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/general.css" />
 <link type="text/css" rel="stylesheet"
 	href="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/themes/bootstrap/css/add-edit-form.css" />
+<script src="js/desativaBotaoDireitoMouse.js"></script>
+
 <script
 	src="http://www.sinfeago.org.br/cadastro/assets/grocery_crud/js/jquery-1.11.1.min.js"></script>
 <script
@@ -42,20 +44,69 @@ a:hover {
 }
 </style>
 
+<!-- Bootstrap Core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+	rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-	</div>
-	</div>
+<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../">Início</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="../pcrja/">#PCRjá</a></li>
+					<li><a href="../pcrja/shop/"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Camisetas</a></li>
+					<li><a href="../noticias/">Notícias</a></li>
+					<li><a href="../juridico/">Jurídico</a></li>
+					<li><a href="../financeiro/">Financeiro</a></li>
+					<li><a href="../forum/">Fórum</a></li>
+					<li><a href="../sobre/">Quem somos</a></li>
+					<li><a href="../cadastro/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Atualização cadastral</a></li>
+					<li><a href="../secure/"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Acesso restrito</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<br><br>
 	<div style='height: 20px;'></div>
 	<div>
 		<div class="crud-form"
 			data-unique-hash="45dbc5cbbd3e97b799db3334f0a0488b">
 			<div class="container">
+				<img src="../img/logo300.png" />
+				<p>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-label">
-							<div class="floatL l5">Adicionar Cadastro</div>
+							<div class="floatL l5"><strong>Atualização cadastral</strong></div>
 							<div
 								class="floatR r5 minimize-maximize-container minimize-maximize">
 								<i class="fa fa-caret-up"></i>
@@ -194,9 +245,9 @@ a:hover {
 								</div>
 								<div class="form-group">
 									<div class="col-sm-offset-3 col-sm-7">
-										<button class="btn btn-info b10" type="button"
+										<button class="btn btn-success b10" type="button"
 											id="save-and-go-back-button">
-											<i class="fa fa-rotate-left"></i> Salvar
+											<i class="fa check"></i> Salvar
 										</button>
 										<button class="btn btn-default cancel-button b10"
 											type="button" id="cancel-button">
